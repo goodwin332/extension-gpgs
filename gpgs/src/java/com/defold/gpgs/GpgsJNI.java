@@ -201,7 +201,8 @@ public class GpgsJNI {
                     onConnected(task.getResult(), MSG_SIGN_IN);
                 } else {
                     sendSimpleMessage(MSG_SIGN_IN, "status", STATUS_FAILED,
-                            "error", "Sign-in failed");
+                            "error", "Sign-in failed",
+                            "msg", task.getException().toString());
                 }
             } else {
                 sendSimpleMessage(MSG_SIGN_IN, "status", STATUS_FAILED,
